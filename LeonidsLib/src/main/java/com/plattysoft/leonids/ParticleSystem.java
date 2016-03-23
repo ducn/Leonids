@@ -613,7 +613,9 @@ public class ParticleSystem {
 				}
 			}
 		}
-		mDrawingView.postInvalidate();
+		if (mDrawingView != null) {
+			mDrawingView.postInvalidate();
+		}
 	}
 
 	private void cleanupAnimation() {
